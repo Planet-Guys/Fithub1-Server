@@ -57,5 +57,6 @@ public class AlarmRestController {
     public ResponseDto<NotificationResponseDto.NotificationConfirmDto> confirmNotification(@PathVariable(name = "alarmId") Long alarmId, @AuthUser User user) {
         notificationService.confirmNotification(alarmId, user);
         return ResponseDto.of(NotificationConverter.toNotificationConfirmDto());
+
     }
 }
